@@ -18,10 +18,10 @@ client.on('message', (message) => {
   
     const command = message.content.slice(prefix.length);
     
-    if (command === "responde") {
+    if (command === "insulta") {
         let randomIndex = Math.floor(Math.random() * respuestas.RESPUESTAS.length);
         let respuesta = respuestas.RESPUESTAS[randomIndex];
-        message.reply(respuesta);
+        message.channel.send("Eres un " + respuesta.toLocaleLowerCase());
     }
  
 });
@@ -31,7 +31,7 @@ client.on('voiceStateUpdate', (oldUserChannel, newUserChannel) => {
     // Comprobar que ha llegado
     if (newUserChannel.channel !== null && oldUserChannel.channel === null) {
 
-        if (newUserChannel.member.user.username) {
+        if (newUserChannel.member.user.bot) {
             return; // Era un bot
         }
 
