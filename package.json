@@ -1,0 +1,17 @@
+{
+  "name": "tech-fest-discord-bot",
+  "version": "1.0.0",
+  "description": "Ejemplo de bot de Discord en node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.4.1",
+    "ffmpeg-static": "^4.2.7"
+  }
+}
